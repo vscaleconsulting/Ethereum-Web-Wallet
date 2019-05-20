@@ -4,33 +4,35 @@
         <link rel="stylesheet" type="text/css" href="./style.css">
         <script type="text/javascript" src="./js/ethers-v4.min.js"></script>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
     </head>
 
     <body>
-        <div class="main-center" id="">
-            <h1>Ethereum Wallet Import</h1>
+        <div class="center" id="main-loading">
+            <h2>Ethereum Wallet Import</h2>
             <hr />
-            <h2>Memonic Phrase Method</h2>
+            <h3>Memonic Phrase Method</h3>
             <br />
             <table>
-                    <tr>
-                        <th>Memonic Phrase:</th>
-                        <td><input type="text" placeholder="mnemonic phrase" id="select-mnemonic-phrase" /></td>
-                    </tr>
-                    <tr>
-                        <th>Key Path:</th>
-                        <td><input type="text" placeholder="key path" id="select-mnemonic-path" value="m/44'/60'/0'/0/0" /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <div class="submit" id="submit-mnemonic" >Derivation</div>
-                        </td>
-                    </tr>
-                </table>
+                <tr>
+                    <th>Memonic Phrase:</th>
+                    <td><input type="text" placeholder="mnemonic phrase" id="select-mnemonic-phrase" /></td>
+                </tr>
+                <tr>
+                    <th>Key Path:</th>
+                    <td><input type="text" placeholder="key path" id="select-mnemonic-path" value="m/44'/60'/0'/0/0" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="submit" id="submit-mnemonic" >Derivation</div>
+                    </td>
+                </tr>
+            </table>
+            <br />
             
 
-            <h2>Private Key Method</h2>
+            <h3>Private Key Method</h3>
             <br />
             <table>
                 <tr>
@@ -44,8 +46,63 @@
                     </td>
                 </tr>
             </table>
+            <br />
 
             <!-- Key Store file method to be supported -->
+            <br />
+        </div>
+
+
+        <div class="class" id="main-wallet">
+            <h2>Ethereum Wallet</h2>
+            <hr />
+            <h3>Wallet Info:</h3>
+
+            <table>
+                <tr><th>Address:</th>
+                    <td>
+                        <input type="text" readonly="readonly" class="readonly" id="wallet-address" value="" /></div>
+                    </td>
+                </tr>
+                <tr><th>Balance:</th>
+                    <td>
+                        <input type="text" readonly="readonly" class="readonly" id="wallet-balance" value="0.0" /></div>
+                    </td>
+                </tr>
+                <tr><th>Nonce:</th>
+                    <td>
+                        <input type="text" readonly="readonly" class="readonly" id="wallet-transaction-count" value="0" /></div>
+                    </td>
+                </tr>
+                <tr><td> </td>
+                    <td>
+                        <div id="wallet-submit-refresh" class="submit">Refresh</div>
+                    </td>
+                </tr>
+            </table>
+            <br />
+
+
+            <h3>ETH transaction:</h3>
+            <table>
+                <tr>
+                    <th>send to:</th>
+                    <td><input type="text" placeholder="receiver address" id="wallet-send-to-address" /></td>
+                </tr>
+                <tr>
+                    <th>amount:</th>
+                    <td><input type="text" placeholder="0.00 ETH" id="wallet-send-amount" /></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <div id="wallet-submit-send" class="submit disable">Send</div>
+                    </td>
+                </tr>
+            </table>
+            <br />
+
+            
         </div>
     </body>
 </html>
