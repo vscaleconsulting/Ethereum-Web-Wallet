@@ -4,7 +4,15 @@ body {
     font-size: 18px;
     margin-left: 80px;
     margin-top: 50px;
+    margin-bottom: 40px;
 }
+
+.center {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
 
 
 th {

@@ -5,7 +5,7 @@ App = {
     contract: null,
 
     setupWallet: function (wallet) {
-        showWallet();
+        //showWallet();   ///@dev
         
         // connect to local Geth
         //App.provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:8545");
@@ -17,15 +17,18 @@ App = {
         var inputWalletAddress = $('#wallet-address');
         inputWalletAddress.val(wallet.address);
     
-        // $('#save-keystore').click(App.exportKeystore);
-    
+        
         App.refreshUI();
         App.setupSendEther();
 
-        App.initToken();
-        App.setupSendToken();
+        //App.initToken();
+        //App.setupSendToken();
       },
-
+    
+    init: function() {
+        App.initLoadKey();
+        App.initMnemonic();
+    },
 
     //============================= Method for Load Wallet ==============================//  
     // Load PriKey
@@ -173,3 +176,4 @@ App = {
       },
 }
 
+App.init();

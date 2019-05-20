@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="./style.css">
         <script type="text/javascript" src="./js/ethers-v4.min.js"></script>
         <script type="text/javascript" src="./js/jquery.min.js"></script>
-        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="./app.js"></script>
     </head>
 
     <body>
@@ -53,7 +53,7 @@
         </div>
 
 
-        <div class="class" id="main-wallet">
+        <div class="center" id="main-wallet">
             <h2>Ethereum Wallet</h2>
             <hr />
             <h3>Wallet Info:</h3>
@@ -102,7 +102,44 @@
             </table>
             <br />
 
+            <!--
+            <h3>Token Transform:</h3>
+            <table>
+                <tr>
+                    <th>sent to:</th>
+                    <td><input type="text" placeholder="receiver address" id="wallet-token-send-target-address" /></td>
+                </tr>
+                <tr>
+                    <th>amount:</th>
+                    <td><input type="text" placeholder="amount" id="wallet-token-send-amount" /></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <div id="wallet-token-submit-send" class="submit disable">Send</div>
+                    </td>
+                </tr>
+            </table>
+            <br />
+        -->
+
+            <h3>Transactions Record：</h3>
+            <div id="wallet-activity" class="activity"></div>
+            <hr />
+
             
+        </div>
+        <div class="center">
+            <h3>Disclaimer:</h3>
+                <p>
+                    This is a light ETH wallet with limited methods. 
+                    <br />
+                    Donation:
+                    <br /> 
+                    BTC: 36QRac7QyyzF4JdeNN7WKvTQyShn7tnQS3
+                    <br />
+                    ETH: 0x8F2085Db36f5306D7A29199661be121F733b9727
+                </p>
         </div>
     </body>
 </html>
