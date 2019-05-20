@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Ethereum Web Wallet - QuantumCat</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script type="text/javascript" src="./js/ethers-v4.min.js"></script>
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="main-center" id="">
+            <h1>Ethereum Wallet Import</h1>
+            <hr />
+            <h2>Memonic Phrase Method</h2>
+            <br />
+            <table>
+                    <tr>
+                        <th>Memonic Phrase:</th>
+                        <td><input type="text" placeholder="mnemonic phrase" id="select-mnemonic-phrase" /></td>
+                    </tr>
+                    <tr>
+                        <th>Key Path:</th>
+                        <td><input type="text" placeholder="key path" id="select-mnemonic-path" value="m/44'/60'/0'/0/0" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="submit" id="submit-mnemonic" >Derivation</div>
+                        </td>
+                    </tr>
+                </table>
+            
+
+            <h2>Private Key Method</h2>
+            <br />
+            <table>
+                <tr>
+                    <th>Private Key:</th>
+                    <td><input type="text" placeholder="private key" id="select-prikey" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="submit" id="submit-prikey">Load Private Key</div>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Key Store file method to be supported -->
+        </div>
+    </body>
+</html>
